@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Running the app
 
-`npm install` 
+`npm install` \
 `npm start`
 
 ### ****** Design ******
