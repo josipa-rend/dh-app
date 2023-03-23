@@ -1,0 +1,44 @@
+<form (ngSubmit)="submitForm()" [formGroup]="loginForm" autocomplete="off" style="margin: 40px;">
+  <div style="display: flex; justify-content: center">
+    <mat-card class="form-container">
+      <mat-card-title>Login</mat-card-title>
+
+      <!-- Email -->
+      <div>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="enter email"
+            formControlName="email"
+          />
+        </mat-form-field>
+        <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class="alert" hidden>
+          <small style="color: red">Please enter valid email</small>
+        </div>
+      </div>
+      <!-- /Email -->
+      <br>
+      <!-- Password -->
+      <div>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            placeholder="enter password"
+            formControlName="password"
+          />
+        </mat-form-field>
+        <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert" hidden>
+          <small style="color: red;">Password needs to be <br>  minimum 6 characters long,<br>  and needs to contain at <br> least one diggit! <br> </small>
+        </div>
+      </div>
+      <!-- /Password -->
+<br>
+      <div>
+        <button type="submit" mat-raised-button color="primary">Login</button>
+      </div>
+    </mat-card>
+  </div>
+</form>

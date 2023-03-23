@@ -1,0 +1,25 @@
+<form (ngSubmit)="submitForm()" [formGroup]="inputForm" autocomplete="off" style="margin: 40px;">
+  <div style="display: flex; justify-content: center">
+    <mat-card class="form-container">
+      <mat-card-title>Input</mat-card-title>
+      <br>
+      <!-- Email -->
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter input</mat-label>
+          <textarea matInput style="height: 100px;" id="input_text"></textarea>
+        </mat-form-field>
+        <div *ngIf="inputForm.controls['input'].invalid && (inputForm.controls['input'].dirty || inputForm.controls['input'].touched)" class="alert" hidden>
+          <small style="color: red">Please enter some string</small>
+        </div>
+      </div>
+      <div>
+        <button type="submit" mat-raised-button color="primary">encode</button>
+      </div>
+      <br>
+      <mat-form-field id="output" appearance="fill" >
+        <textarea matInput [readonly]="true" style="height: 100px;" id="output_text"></textarea>
+      </mat-form-field>
+    </mat-card>
+  </div>
+</form>
