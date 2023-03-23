@@ -23,7 +23,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - token does not have expiration time set
 
-- `Angular Material` components are used for design: the needed components are first imported in angular-material.module.ts, which is then imported in app.module.ts : I intended to remove the components I did not need by the finalization of the project but forgot, will make an additional commit to fix that, but it is not something that affects functionality
+- `Angular Material` components are used for design: the needed components are first imported in `angular-material.module.ts`, which is then imported in `app.module.ts` : I intended to remove the components I did not need by the finalization of the project but forgot, will make an additional commit to fix that, but it is not something that affects functionality
 
 ### ************
 
