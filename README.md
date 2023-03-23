@@ -4,10 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Running the app
 
-npm install 
-npm start
+`npm install` 
+`npm start`
 
-### Design
+### ****** Design ******
 
 - frontend app running on port 4200 (be: https://github.com/josipa-rend/code-challenge)
 - developped in angular
@@ -15,13 +15,17 @@ npm start
 - services: auth, encoder
 - helpers: interceptor, validators
 
-- auth.service.ts: authentication is done by sending credentials to the user: if they are correct token is returned and saved in localStorage so it can be send in headers of subsequent requests, that will be used on server side to authorize the request. Headers are included in auth.interceptor.ts. Services' endpoint is called from login component.
+- `auth.service.ts`: authentication is done by sending credentials to the user: if they are correct token is returned and saved in localStorage so it can be send in headers of subsequent requests, that will be used on server side to authorize the request. Headers are included in `auth.interceptor.ts`. Services' endpoint is called from login component.
 
-- encoder.service.ts: contains fuction for encoder request,is injected in home component where the function is called with user inserted text in 'input' field of form that is displayed. The response is then shown in the 'output' field of the form.
+- `encoder.service.ts`: contains fuction for encoder request,is injected in home component where the function is called with user inserted text in 'input' field of form that is displayed. The response is then shown in the 'output' field of the form.
 
+- tests not implemented
 
+- token does not have expiration time set
 
+- `Angular Material` components are used for design: the needed components are first imported in angular-material.module.ts, which is then imported in app.module.ts : I intended to remove the components I did not need by the finalization of the project but forgot, will make an additional commit to fix that, but it is not something that affects functionality
 
+### ************
 
 
 ## Development server
